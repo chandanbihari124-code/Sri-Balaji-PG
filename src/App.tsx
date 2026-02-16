@@ -1,4 +1,7 @@
 import { useState } from "react";
+import { Analytics } from '@vercel/analytics/react';
+
+
 
 interface Room {
   type: string;
@@ -385,6 +388,7 @@ export function App() {
           </div>
         </div>
       </footer>
+      <Analytics />
     </div>
   );
 }
