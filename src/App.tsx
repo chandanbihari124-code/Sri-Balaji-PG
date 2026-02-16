@@ -319,7 +319,12 @@ export function App() {
               <h4 className="text-3xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent mb-8">
                 📝 Book Your Room
               </h4>
-              <form className="space-y-6">
+              <form
+                action="https://formspree.io/f/xkovbnjp"
+                method="POST"
+                className="space-y-6"
+              >
+
                 <div>
                   <label className="block text-gray-800 font-bold mb-3">Full Name</label>
                   <input type="text" className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all" placeholder="Enter your full name" />
