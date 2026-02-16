@@ -322,25 +322,50 @@ export function App() {
               <form
                 action="https://formspree.io/f/xkovbnjp"
                 method="POST"
+                encType="application/x-www-form-urlencoded"
                 className="space-y-6"
               >
+                <input type="hidden" name="_subject" value="New PG Booking Enquiry" />
+
+
 
                 <div>
                   <label className="block text-gray-800 font-bold mb-3">Full Name</label>
-                  <input type="text" className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all" placeholder="Enter your full name" />
+                  <input
+                    type="text"
+                    name="name"
+                    className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all"
+                    placeholder="Enter your full name"      
+                  />
+
                 </div>
                 <div>
                   <label className="block text-gray-800 font-bold mb-3">Phone Number</label>
-                  <input type="tel" className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all" placeholder="Enter your phone number" />
+                  <input
+                    type="tel"
+                    name="phone"
+                    className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all"
+                    placeholder="Enter your number"
+                  />
+
                 </div>
                 <div>
                   <label className="block text-gray-800 font-bold mb-3">Email</label>
-                  <input type="email" className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all" placeholder="Enter your email" />
+                  <input
+                    type="email"
+                    name="email"
+                    className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all"
+                    placeholder="Enter your email id"
+                  />
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-gray-800 font-bold mb-3">Room Type</label>
-                    <select className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all">
+                    <select
+                      name="room"
+                      className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all"
+                    >
+
                       <option>Select room type</option>
                       <option>Single Sharing - ₹12,000</option>
                       <option>Double Sharing - ₹10,500</option>
@@ -349,7 +374,11 @@ export function App() {
                   </div>
                   <div>
                     <label className="block text-gray-800 font-bold mb-3">Preferred Location</label>
-                    <select className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all">
+                    <select
+                      name="location"
+                      className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all"
+                    >
+
                       <option>Select location</option>
                       <option>Andavar Nagar</option>
                       <option>Thirumalai Nagar</option>
@@ -357,10 +386,17 @@ export function App() {
                     </select>
                   </div>
                 </div>
-                <div>
+                
                   <label className="block text-gray-800 font-bold mb-3">Message</label>
-                  <textarea className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all" rows={3} placeholder="Any special requirements or questions? (Optional)"></textarea>
-                </div>
+                  <textarea
+                    name="message"
+                    className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all"
+                    rows={3}
+                    placeholder="Any special requirements or questions? (Optional)"
+                  >
+
+                  </textarea>
+
                 <button type="submit" className="w-full bg-gradient-to-r from-orange-500 to-red-600 text-white py-4 rounded-xl font-bold text-lg hover:shadow-2xl transition-all transform hover:scale-105">
                   🚀 Book Now
                 </button>
