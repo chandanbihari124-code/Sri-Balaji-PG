@@ -161,9 +161,13 @@ export function App() {
                       </li>
                     ))}
                   </ul>
-                  <button className="w-full bg-gradient-to-r from-orange-500 to-red-600 text-white py-4 rounded-xl font-bold text-lg hover:shadow-xl transition-all transform hover:scale-105">
+                  <a
+                    href="#contact"
+                    className="block text-center w-full bg-gradient-to-r from-orange-500 to-red-600 text-white py-4 rounded-xl font-bold text-lg hover:shadow-xl transition-all transform hover:scale-105"
+                  >
                     🚀 Book This Room
-                  </button>
+                  </a>
+
                 </div>
               </div>
             ))}
